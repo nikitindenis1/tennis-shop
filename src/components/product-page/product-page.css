@@ -1,0 +1,104 @@
+.product__page{
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+.product__page .incrementor{
+    transform: scale(1.1);
+    transform-origin: left;
+}
+.product__page__content{
+    align-items: flex-start;
+}
+.product__page__img{
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+.product__page__details{
+    width: calc(100% - 500px);
+    padding-left: 30px;
+    padding-right: 20px;
+}
+.product__page__details h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    line-height: normal;
+}
+.product__page__details > h4{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: normal;
+    margin-top: 20px;
+}
+ .product__page__img img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+ }
+ .product__page__details .incrementor{
+     margin-top: 30px;
+ }
+ .product__page__add__btn{
+     margin-top: 40px;
+     padding-left: 25px;
+     padding-right: 25px;
+     height: 40px;
+     background: black;
+     font-weight: 600;
+     color: white;
+     font-size: 17px;
+     letter-spacing: 1.4px;
+ }
+
+ @media only screen and (max-width: 1050px){
+    .product__page__img{
+        width: 350px;
+        height: 350px;
+    }
+    .product__page__details{
+        width: calc(100% - 350px);
+    }
+ }
+ @media only screen and (max-width: 730px){
+    .product__page__img{
+        width: 250px;
+        height: 250px;
+    }
+    .product__page__details{
+        width: calc(100% - 250px);
+    }
+    .product__page__content{
+       padding-left: 10px;
+       padding-right: 10px;
+      width: 100%;
+    }
+ }
+ @media only screen and (max-width: 500px){
+    .product__page__img{
+        width: 100%;
+        background: white;
+        height: 95vw;
+    }
+    .product__page__img img{
+       
+    }
+    .product__page__details{
+       width: 100%;
+       padding-left: 0px;
+    }
+    .product__page__content{
+        flex-direction: column;
+        align-items: center;
+      width: 100%;
+      padding-bottom: 110px;
+    }
+    .product__page{
+        margin-top: 20px;
+    }
+    .product__page__details h3{
+        font-size: 18px;
+    }
+ }

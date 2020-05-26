@@ -1,0 +1,344 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+
+
+
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+button{cursor: pointer;}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans', sans-serif!important;
+  line-height: 1;
+  background: #eaeaea;
+
+  padding-bottom: 0px;
+
+}
+
+input,button{
+  border-radius: 0px;
+}
+/* width */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex__between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+:root{
+  --grid-width:1000px
+}
+.app__flex{
+  width: var( --grid-width);
+  margin: auto;
+  padding-top: 85px;
+  overflow: hidden;
+  height: 100%;
+}
+ul{list-style-type: none;}
+ul li{list-style-type: none;}
+
+.list{
+  width: calc(100% - 220px);
+  background: #eaeaea;
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  flex-wrap: wrap;
+ margin-left: auto;
+  align-items: flex-start;
+
+
+}
+.list__element{
+    border: 1px solid white;
+    width: calc(100% / 4);
+    padding: 15px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.list__element h4{
+  font-size: 12px;
+  margin-bottom: 5px;
+  opacity: 0.6;
+  text-align: center;
+  line-height: normal;
+}
+.list__element h3{
+  font-size: 15px;
+  font-weight: bold;
+}
+.list__element__img{
+  height: 140px;
+  width: 100%;
+background: #F6F6F6;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.list__element__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.2s all;
+}
+.list__element__img img:hover{
+  transform: scale(1.1);
+}
+.list__element__cart__btn{
+  margin-top: auto;
+  width: 100%;
+  height: 35px;
+  color: black;
+  font-size: 14px;
+  border: 0px;
+  background: white;
+  border-radius: 2px;
+  transition: 0.2s all;
+  font-weight: bold;
+}
+.list__element__cart__btn:hover{
+  background: black;
+  color: white;
+  transform: scale(1.1);
+}
+.list__element__cart__btn svg{
+  font-size: 16px;
+  margin-top: 2px;
+  margin-right: 3px;
+}
+.figure__img__loader{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  animation: animate 2s linear forwards infinite;
+  transition: 0.3s all;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  pointer-events: none;
+}
+#figure__img__loader--disabled{
+  opacity: 0!important;
+  animation: none;
+}
+@keyframes animate{
+  0%{
+      opacity: 1;
+  }
+  50%{
+      opacity: 0.5;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  :root{
+    --grid-width:700px
+  }
+  .list__element{
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+ .list{
+   width: 100%;
+   margin: auto;
+ }
+ :root{
+  --grid-width:100%;
+}
+.bread__crumbs{
+  padding-left: 10px;
+}
+.app__flex{
+  padding-top: 95px;
+}
+.list__element{
+  padding: 10px;
+}
+}
+

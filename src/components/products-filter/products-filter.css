@@ -1,0 +1,134 @@
+.products__filter{
+    width: 200px;
+    height: auto;
+    
+}
+#products__filter--mobile{
+    display: none;
+}
+.products__filter__section:last-child header{
+    border: 0px;
+}
+.products__filter__section header{
+    height: 30px;
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    padding-right: 10px;
+    transition: 0.2s all;
+}
+
+.products__filter__section header h4{
+    font-size: 14px;
+}
+.products__filter__section ul {
+    transform: scaleY(0);
+    height: 0px;
+    transform-origin: top;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+.products__filter__section ul li{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    padding-right: 4px;
+  
+}
+.products__filter__section ul li h5{
+    margin-left: auto;
+    font-size: 12px;
+   opacity: 0.6;
+}
+.products__filter__section .MuiCheckbox-root{
+    padding: 5px;
+}
+.products__filter__section li figure{
+margin-right: 5px;
+}
+.products__filter__section .MuiSvgIcon-root{
+    width: 0.8em;
+    height: 0.8em;
+}
+
+#products__filter__section--active ul{
+    transform: scaleY(1);
+    max-height: 180px;
+    height: auto;
+    overflow-y: auto;
+}
+#products__filter__section--active header svg{
+    transform: rotate(90deg)!important;
+}
+
+    @media only screen and (max-width: 730px){
+        
+        #products__filter--mobile{
+            display: flex;
+        }
+        #products__filter--desktop{
+            display: none;
+        }  
+           #products__filter--mobile {
+            position: relative;
+            z-index: 99999;
+            width: 100%;
+           
+            background: lightgray;
+        }
+        
+        #products__filter--mobile .products__filter{
+            transform: translate(-100%);
+            position: fixed;
+            top: 135px;
+            width: 100%;
+            transition: 0.2s all;
+           height: calc(100% - 135px);
+            background: #eaeaea;
+            overflow: hidden;
+            overflow: auto;
+            
+            padding-bottom: 170px;
+            left: 0px;
+            border-top: 1px solid white;
+
+        }
+        #products__filter--mobile header{
+            width: 100%;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            background: lightgray;
+     
+        }
+        #products__filter--mobile header button{
+            width: 100%;
+            height: 100%;
+            border: 0px;
+            font-size: 14px;
+        }
+        #products__filter--mobile header button svg{
+            font-size: 17px;
+        }
+        #products__filter--active{
+            transform: translate(0%)!important;
+           
+        }
+        #products__filter__section--active ul{
+            max-height: none;
+        }
+        .products__filter__section .MuiSvgIcon-root{
+            width: 1em;
+            height: 1em;
+        }
+        .products__filter__section ul li{
+            height: 35px;
+        }
+    }

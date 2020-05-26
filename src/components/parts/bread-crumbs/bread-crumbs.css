@@ -1,0 +1,38 @@
+.bread__crumbs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.bread__crumbs__element{
+ 
+}
+.bread__crumbs__element a,
+.bread__crumbs__element p{
+    color: black;
+    font-size: 12px;
+}
+.bread__crumbs__element:last-child{
+    opacity: 0.7;
+    pointer-events: none;
+}
+.bread__crumbs__element:last-child svg{
+    display: none;
+}
+.bread__crumbs__element svg{
+    font-size: 15px;
+}
+@media only screen and (max-width: 730px){
+    .bread__crumbs__element a, .bread__crumbs__element p{
+        font-size: 14px;
+    }
+    .bread__crumbs__element:last-child p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100px;
+
+    }
+    
+}

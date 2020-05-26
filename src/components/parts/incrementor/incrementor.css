@@ -1,0 +1,25 @@
+
+.incrementor{
+    height: 25px;
+    border: 1px solid rgba(0,0,0, 0.3);
+    width: calc(50px + 40px);
+}
+.incrementor h4{
+    width: 40px;
+    border-left: 1px solid rgba(0,0,0, 0.3);
+    border-right: 1px solid rgba(0,0,0, 0.3);
+    height: 100%;
+    font-size: 14px;
+}
+.incrementor button{
+    border-radius: 50%;
+    width: 25px;
+    height: 100%;
+    padding: 0px;
+    border: 0px;
+    position: relative;
+    background: transparent;
+}
+.incrementor button svg{
+    font-size: 14px;
+}

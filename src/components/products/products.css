@@ -1,0 +1,299 @@
+.products {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 300px;
+    transition: 0.2s all;
+}
+.products__list__wrapper{
+    flex-direction: column;
+}
+.products__list{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+.products__empty{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 20px;
+  top: 100px;
+}
+.products__scroll__top {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 2px solid white;
+    transition: 0.2s all;
+    z-index: 99999;
+    padding: 0px;
+}
+.products__scroll__top a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.products__scroll__top:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.cart__popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 999999999;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.cart__popup .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    opacity: 0;
+    transition: 0.4s all;
+}
+
+.cart__popup__content {
+    width: 800px;
+    height: 500px;
+    position: relative;
+    background: white;
+    transform: translate(0, -800px);
+    transition: 0.2s all;
+    padding: 30px;
+    overflow: hidden;
+   
+}
+.cart__popup__content figure{
+    width: 400px;
+    height: 100%;
+}
+.cart__popup__content figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#cart__popup--active {
+    pointer-events: all;
+}
+#cart__popup--active .overlay{
+    opacity: 1;
+}
+#cart__popup--active .cart__popup__content{
+    transform: translate(0,100px);
+}
+.cart__popup__content__details{
+    padding-left: 30px;
+    width: calc(100% - 400px);
+    height: 100%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+
+}
+.cart__popup__content__details h3{
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+.cart__popup__content__details h2{
+    font-weight: bold;
+    font-size: 26px;
+}
+.cart__popup__actions{
+margin-top: auto;
+margin-left: auto;
+}
+.cart__popup__actions button{
+    width: 120px;
+    height: 35px;
+    margin-left: 15px;
+    background: black;
+    border: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    transition: 0.2s all;
+}
+.cart__popup__actions button:hover{
+    transform: scale(1.1);
+}
+.cart__popup__success{
+    width: 380px;
+    height: 220px;
+    background: white;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    position: absolute;
+    z-index: 99;
+   opacity: 0;
+   pointer-events: none;
+   transition: 0.2s all;
+}
+#cart__popup__success--active{
+    pointer-events: all;
+    opacity: 1;
+}
+.cart__popup__success h2{
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.cart__popup__success button{
+    height: 40px;
+    width: 130px;
+    font-size: 14px;
+  font-weight: bold;
+    border: 0px;
+    background: black;
+    color: white;
+}
+.cart__popup__success svg{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+#cart__popup__content--blurred{
+   opacity: 0;
+
+   
+}
+.rackets__list__element a{
+    display: flex;
+    width: 100%;
+}
+@media only screen and (max-width: 1200px){
+    #cart__popup--active .cart__popup__content{
+        transform: translate(0,50px);
+    }
+    .cart__popup__content figure{
+        width: 350px;
+    }
+    .cart__popup__content__details{
+        width: calc(100% - 350px);
+    }
+    .cart__popup__content{
+        height: 400px;
+    }
+}
+@media only screen and (max-width: 900px){
+    .cart__popup__content{
+        width: 650px;
+        height: 360px;
+        position: absolute;
+        align-items: flex-start;
+    }
+    .cart__popup__content figure{
+        width: 300px;
+        height: 300px;
+    }
+    .cart__popup__content__details{
+        width: calc(100% - 300px);
+        padding-top: 0px;
+        height: 100%;
+    }
+    .cart__popup__actions button{
+        width: 100px;
+    }
+}
+@media only screen and (max-width: 730px) {
+  .products{
+      flex-direction: column;
+      margin-top: 10px;
+  }
+  .products__list{
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+  .products__list__wrapper{
+      margin-top: 20px;
+  }
+ 
+   }
+   
+
+   @media only screen and (max-width: 670px){
+    .cart__popup__content{
+        width: 350px;
+        height: auto;
+        position: absolute;
+        align-items: center;
+        flex-direction: column;
+    }
+    .cart__popup__content figure{
+        width: 200px;
+        height: 200px;
+    }
+    .cart__popup__content figure img{
+        object-fit: cover;
+    }
+    .cart__popup__content__details{
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 0px;
+       
+    }
+    .cart__popup__actions{
+       justify-content: center;
+       margin-left: 0px;
+       margin-top: 60px;
+    }
+    .cart__popup__content .selectbox{
+      
+    }
+    .list__element__img img:hover{
+        transform: none;
+    }
+    .list__element__cart__btn:hover{
+        transform: none;
+        background: white;
+        color: black;
+    }
+    #cart__popup--active .cart__popup__content{
+        transform: translate(0, 50px);
+    }
+    .cart__popup__actions button:hover{
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 430px){
+    .list__element__img{
+        height: 130px;
+    }
+    .cart__popup__actions button{
+       margin: 0px;
+       width: 110px;
+    }
+    .cart__popup__actions{
+        width: 230px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        display: flex;
+    }
+    .cart__popup__content{
+        padding: 15px;
+        width: calc(100% - 20px);
+    }
+  
+    
+}
+
+@media only screen and (max-width: 350px){
+    
+}
